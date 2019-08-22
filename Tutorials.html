@@ -6,8 +6,52 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
-      <div class="container-fluid">
+      <html lang="en">
+      <head>
+        <title>Welcome to Gutorials</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+
+      <nav class="navbar navbar-inverse">
         <a href="Tutorials.html"><img src="Heart1.jpg" class="imgh"></a>
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Gutorials</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home Page</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Pages.html">G Pages<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Tutorials.html">Tutorials</a></li>
+                  <li><a href="TechHacks.html">Hacks</a></li>
+                  <li><a href="News">News.html</a></li>
+                </ul>
+              </li>
+              <li><a href="ContactUs.html">Contact Us</a></li>
+              <li><a href="Help.html">Need Help?</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="SignUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="LogIn.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid">
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="Tutorials.html">Tutorials Page</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
