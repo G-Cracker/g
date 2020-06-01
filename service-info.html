@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>JustG Techs</title>
+    <meta name="description" content="Simplicity Achieving Greatness">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/css/Blankenburg.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/Bold-BS4-Animated-Back-To-Top.css">
+    <link rel="stylesheet" href="assets/css/featured-products-slider-1.css">
+    <link rel="stylesheet" href="assets/css/featured-products-slider.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Product-Details.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+<meta name="google-site-verification" content="i1CH-qXRuLuLxTND3XeBewxixpgNlzBoC_5pyxD_dQA" />
+</head>
+
+<body><nav class="navbar navbar-dark navbar-expand-lg sticky-top clean-navbar" style="background-image: url('assets/img/bg5.jpg');background-repeat: no-repeat;background-size: cover;">
+    <div class="container-fluid"><a class="navbar-brand logo" href="/" style="font-family: Blankenburg;">Ju$tG Tech$</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contact' %}">{{ user.username }}</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'contact' %}">Logout</a></li>
+                {% else %}
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'signup' %}">Register</a></li>
+                {% endif %}
+            </ul>
+    </div>
+    </div>
+</nav>
+    <div class="container">
+        <h1 class="text-center">{{ service.name }}</h1>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12"><img class="img-thumbnail img-fluid center-block" src="assets/img/videomicme.png"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6"><img class="img-thumbnail img-fluid center-block" src="assets/img/videomic-me.gif"></div>
+                    <div class="col-6 col-sm-6 col-md-6"><img class="img-thumbnail img-fluid center-block" src="assets/img/videomic-me.gif"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6"><img class="img-thumbnail img-fluid center-block" src="assets/img/videomic-me.gif"></div>
+                    <div class="col-6 col-sm-6 col-md-6"><img class="img-thumbnail img-fluid center-block" src="assets/img/videomic-me.gif"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <h1>About {{ service.nick }}</h1>
+                <p>{{ service.details }}</p><button class="btn btn-success btn-lg center-block" type="button"><i class="far fa-thumbs-up"></i>Request {{ service }}</button></div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="{% url 'software-development' %}">System/Software design</a></li>
+                            <li><a href="{% url 'web-design' %}">Web design</a></li>
+                            <li><a href="{% url 'mobile-development' %}">Mobile App Development</a></li>
+                            <li><a href="{% url 'bots-and-ai' %}">AI and Bots</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="{% url 'about' %}">JustG Techs</a></li>
+                            <li><a href="{% url 'team' %}">Team</a></li>
+                            <li><a href="{% url 'careers' %}">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>JustG Tech</h3>
+                        <p>We are here to provide those services we need to help run daily errands. All this at affordable prices and some of the best personal customization to meet our users needs. Also some might wonder why use 'purple' as the theme color?
+                            Mix red(pink for&nbsp;<i class="icon ion-female"></i>) and blue( blue for&nbsp;<i class="icon ion-male"></i>) and BOOM! Our theme color. All about equality.</p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/Justg-Techs-102243341486604"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/JustG_Techs"><i class="icon ion-social-twitter"></i></a><a href="https://www.instagram.com/justg_techs/"><i class="icon ion-social-instagram"></i></a>
+                        <a
+                            href="mailto:justg.techs@gmail.com" target="_blank"><i class="icon ion-social-google"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">JustG Techs © 2020<a class="cd-top js-cd-top cd-top--fade-out cd-top--show" style="background-image: url(&quot;assets/img/cd-top-arrow.svg&quot;);background-color: rgba(128,0,128,0.8);" href="#0">Top</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/Bold-BS4-Animated-Back-To-Top.js"></script>
+    <script src="assets/js/featured-products-slider.js"></script>
+</body>
+
+</html>
