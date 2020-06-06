@@ -1,0 +1,15 @@
+User-agent:*
+Disallow: /table.html
+Disallow: /profile.html
+Disallow: /blank.html
+Disallow: /registration.html
+Disallow: /login.html
+Disallow: /catalog-page.html
+Disallow: /downloads.html
+Disallow: /downloads.html
+Disallow: /privacy-policy.html
+Disallow: /tos.html
+Disallow: /justg-forum.html
+Disallow: /tou.html
+Disallow: /help.html
+Sitemap: https://www.justg.tech/sitemap.xml
